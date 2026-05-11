@@ -1,0 +1,100 @@
+baseURL = 'https://rammie-blog.xyz/'
+title = 'rammie_blog'
+theme = 'PaperMod'
+languageCode = 'ko'
+#locale = 'ko-KR'
+defaultContentLanguage = 'ko'
+
+paginate = 8
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+
+#[languages.ko]
+#    languageName = '한국어'
+#    locale = 'ko-KR'
+#    title = 'rammie_blog'
+
+[params]
+    env = 'production'
+    author = 'rammie'
+    description = 'rammie의 이것저것'
+    keywords = ['blog', 'dev']
+
+    # 다크모드
+    defaultTheme = 'auto'  # light / dark / auto
+
+    # 홈 화면 모드 설정
+    showRecentPosts = true
+    homeInfoParams.Title = 'rammie의 이것저것'
+    homeInfoParams.Content = ''
+    #mainSections = ['posts']
+    #profileMode.enabled = false
+
+    # 글 설정
+    showReadingTime = true
+    showShareButtons = true
+    showPostNavLinks = true
+    showBreadCrumbs = true
+    showCodeCopyButtons = true
+    showToc = true
+
+    [params.cover]
+        hidden = false              # 글 목록에서 숨김 여부
+        hiddenInList = false        # 리스트 페이지에서 표시
+        hiddenInSingle = false      # 글 상세 페이지에서 표시
+
+    # 소셜 아이콘 (homeInfoParams 아래 표시됨)
+    [[params.socialIcons]]
+        name = 'github'
+        url = 'https://github.com/rammie90/'
+
+    [[params.socialIcons]]
+        name = 'instagram'
+        url = 'https://instagram.com/rammie90/'
+
+    [[params.socialIcons]]
+        name = 'linkedin'
+        url = 'https://www.linkedin.com/in/rammie90/'
+
+    [[params.socialIcons]]
+        name = 'youtube'
+        url = 'https://youtube.com/channel/UCGjeBlv1YIXGq3ejWXgNopA?si=nw6in7e28saXoYYy'
+
+    [[params.socialIcons]]
+        name = 'other'
+        url = 'https://blog.naver.com/yul1214'
+
+    [[params.socialIcons]]
+        name = 'email'
+        url = 'mailto:rammie90@gmail.com'
+
+[menu]
+    [[menu.main]]
+        name = 'Posts'
+        url = '/posts/'
+        weight = 1
+
+    [[menu.main]]
+        name = 'Categories'
+        url = '/categories/'
+        weight = 2
+
+    [[menu.main]]
+        name = 'Tags'
+        url = '/tags/'
+        weight = 3
+
+    [[menu.main]]
+        name = 'About'
+        url = '/about/'
+        weight = 4
+
+[markup]
+    [markup.highlight]
+        #noClasses = false  # 코드 하이라이팅 CSS 클래스 사용
+        style = 'monokai'            # 코드 하이라이팅 테마
+
+    [markup.goldmark.renderer]
+        unsafe = true
+
