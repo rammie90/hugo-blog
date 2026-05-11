@@ -1,0 +1,11 @@
+/* 썸네일만 높이 고정 */
+.post-entry .entry-cover img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* 커버 이미지는 건드리지 않음 */
+.post-single .entry-cover img {
+    height: auto;         /* 원본 비율 유지 */
+}
