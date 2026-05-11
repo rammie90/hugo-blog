@@ -12,39 +12,16 @@ tags: [blog, linux, server, wordpress]
 ---
 요즘은 많은 홈페이지와 블로그들이 WordPress를 통해서 만들어진다고 한다. WordPress를 설치형 블로그라고 하는데, 페이지 모양을 구성해주는 일종의 템플릿이다.
 
-<ul class="wp-block-list">
-  <li>
-    <a href="https://namu.wiki/w/워드프레스">https://namu.wiki/w/워드프레스</a>
-  </li>
-</ul>
+- <https://namu.wiki/w/워드프레스>
 
 서버 구축 이후, WordPress 설치와 사용을 위해서는 선행해야 할 작업들이 있다.
 
-<ul class="wp-block-list">
-  <li>
-    NGINX 설치 <ul class="wp-block-list">
-      <li>
-        <a href="https://yeopbox.com/우분투ubuntu-22-04-server-php-nginx-설치기/">https://yeopbox.com/우분투ubuntu-22-04-server-php-nginx-설치기/</a>
-      </li>
-    </ul>
-  </li>
-  
-  <li>
-    PHP 설치 <ul class="wp-block-list">
-      <li>
-        <a href="https://yeopbox.com/우분투ubuntu-22-04-server-php-nginx-설치기/">https://yeopbox.com/우분투ubuntu-22-04-server-php-nginx-설치기/</a>
-      </li>
-    </ul>
-  </li>
-  
-  <li>
-    MariaDB 설치 <ul class="wp-block-list">
-      <li>
-        <a href="https://yeopbox.com/우분투ubuntu-22-04-server-mariadb-설치-및-기본-설정/">https://yeopbox.com/우분투ubuntu-22-04-server-mariadb-설치-및-기본-설정/</a>
-      </li>
-    </ul>
-  </li>
-</ul>
+- NGINX 설치
+  - <https://yeopbox.com/우분투ubuntu-22-04-server-php-nginx-설치기/>
+- PHP 설치
+  - <https://yeopbox.com/우분투ubuntu-22-04-server-php-nginx-설치기/>
+- MariaDB 설치
+  - <https://yeopbox.com/우분투ubuntu-22-04-server-mariadb-설치-및-기본-설정/>
 
 위 프로그램 들은 왜 필요한 것일까?
 
@@ -54,47 +31,18 @@ tags: [blog, linux, server, wordpress]
 
 PHP 설치 단계에서 간단한 page를 만들어 브라우저로 접속해보는 test를 해볼 수 있고, 위 과정이 모두 완료되면 드디어 WordPress를 설치하고 사용할 수 있다.
 
-<ul class="wp-block-list">
-  <li>
-    WordPress 설치 <ul class="wp-block-list">
-      <li>
-        <a href="https://yeopbox.com/우분투ubuntu-22-04-server-워드프레스wordpress-설치기/">https://yeopbox.com/우분투ubuntu-22-04-server-워드프레스wordpress-설치기/</a>
-      </li>
-    </ul>
-  </li>
-</ul>
+- WordPress 설치
+  - <https://yeopbox.com/우분투ubuntu-22-04-server-워드프레스wordpress-설치기/>
 
 WordPress 설치 이후 서버 IP를 통해 WordPress page에 접속할 수 있고, 여러가지 설정을 할 수 있다. 다음으로는 IP주소가 아니라 다른 홈페이지들처럼 domain 주소를 통해 내 WordPress 페이지에 접속할 수 있도록 내 domain 만들기에 대해 알아보겠다.
 
-<ul class="wp-block-list">
-  <li>
-    추가 참고 <ul class="wp-block-list">
-      <li>
-        nginx / nginx 환경설정 및 도메인(domain) 변경 방법 <ul class="wp-block-list">
-          <li>
-            <a href="https://growing-nyang.tistory.com/75?category=879817">https://growing-nyang.tistory.com/75?category=879817</a>
-          </li>
-        </ul>
-      </li>
-      
-      <li>
-        가상 호스트 &#8211; server 블록(nginx로 여러개 사이트 운영) <ul class="wp-block-list">
-          <li>
-            <a href="https://opentutorials.org/module/384/4529">https://opentutorials.org/module/384/4529</a>
-          </li>
-        </ul>
-      </li>
-      
-      <li>
-        워드프레스 사용을 위한 PHP 모듈, 익스텐션 설치하기 <ul class="wp-block-list">
-          <li>
-            <a href="https://swiftcoding.org/php-modules-for-wordpress">https://swiftcoding.org/php-modules-for-wordpress</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+- 추가 참고
+  - nginx / nginx 환경설정 및 도메인(domain) 변경 방법
+    - <https://growing-nyang.tistory.com/75?category=879817>
+  - 가상 호스트 – server 블록(nginx로 여러개 사이트 운영)
+    - <https://opentutorials.org/module/384/4529>
+  - 워드프레스 사용을 위한 PHP 모듈, 익스텐션 설치하기
+    - <https://swiftcoding.org/php-modules-for-wordpress>
 
  [1]: https://namu.wiki/w/NGINX
  [2]: https://namu.wiki/w/%EC%95%84%ED%8C%8C%EC%B9%98%20HTTP%20%EC%84%9C%EB%B2%84
