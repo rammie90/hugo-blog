@@ -1,0 +1,4 @@
+*.swp
+*.swo
+public/
+.hugo_build.lock

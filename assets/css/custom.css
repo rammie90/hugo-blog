@@ -1,0 +1,4 @@
+article img {
+    max-width: 100%;        /* 컨테이너 넘지 않게 */
+    height: auto;           /* 비율 유지 */
+}
