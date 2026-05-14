@@ -29,6 +29,8 @@ cleanDestinationDir = true
     showRecentPosts = true
     homeInfoParams.Title = 'rammie의 이것저것'
     homeInfoParams.Content = ''
+    profileTagline = 'Developer · Korea'
+    profileBio = '안녕하세요! 취미로 개발하는 직장인입니다.'
     #mainSections = ['posts']
     #profileMode.enabled = false
 
@@ -39,6 +41,10 @@ cleanDestinationDir = true
     showBreadCrumbs = true
     showCodeCopyButtons = true
     showToc = true
+
+    [params.profileMode]
+        imageUrl = "/images/avatar.png"
+        enabled = false
 
     [params.cover]
         hidden = false              # 글 목록에서 숨김 여부
@@ -63,7 +69,7 @@ cleanDestinationDir = true
         url = 'https://youtube.com/channel/UCGjeBlv1YIXGq3ejWXgNopA?si=nw6in7e28saXoYYy'
 
     [[params.socialIcons]]
-        name = 'other'
+        name = 'naver'
         url = 'https://blog.naver.com/yul1214'
 
     [[params.socialIcons]]
