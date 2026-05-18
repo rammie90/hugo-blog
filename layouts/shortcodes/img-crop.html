@@ -1,0 +1,3 @@
+{{ $img := resources.Get (.Get "src") }}
+{{ $cropped := $img.Fill (printf "%sx%s Center" (.Get "width") (.Get "height")) }}
+<img src="{{ $cropped.RelPermalink }}" alt="{{ .Get "alt" }}">
