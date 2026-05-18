@@ -5,9 +5,12 @@ date: 2026-05-11
 tags: ["hugo", "wordpress", "blog", "migration", "nginx"]
 categories: ["dev"]
 description: "MariaDB와 WordPress로 운영하던 블로그를 Hugo 정적 사이트로 마이그레이션한 과정"
+cover:
+  image: /images/2026/05/hugo-logo-wide.svg
 ---
 
 ## 왜 Hugo인가?
+<https://gohugo.io>
 
 WordPress는 강력하지만 무겁다. PHP, MariaDB, 각종 플러그인이 맞물려 동작하는 구조는 단순한 블로그를 운영하기엔 오버스펙이다. 특히 코드 스니펫과 기술 글 위주의 블로그라면 더욱 그렇다.
 
