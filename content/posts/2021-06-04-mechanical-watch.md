@@ -17,7 +17,7 @@ tagas: [시계, 해밀턴, 카키필드]
 한참을 차고 다니다 시계줄이 너덜너덜해져서, 안쓰는 필통을 잘라 수제 시계줄을 만들어 차고 다니기도 했다.
 그러다 어느날 시계위에 화장품 병이 떨어져 시계가 깨지고 말았고, 그대로 한참을 서랍속에 보관하다 언젠가 이사할 때 버렸던 것 같다.
 
-![](/images/2021/06/watch-box.jpg)
+![시계보관함](/images/2021/06/watch-box.jpg)
 
 이후로도 항상 시계는 차고 다녔다.
 시내 골목에서 만원주고 산 패션시계를 차다가,
@@ -37,7 +37,7 @@ tagas: [시계, 해밀턴, 카키필드]
 차고 다니기만 해도 내부의 추가 알아서 돌며 태엽이 감기는 시계도 있는데,
 나는 수동으로 태엽을 감는 것이 더 단순하고 아름답게 느껴졌다.
 
-![](/images/2021/06/khaki-1.jpg)
+![카키필드](/images/2021/06/khaki-1.jpg)
 
 동작 방식은 태엽을 감아주면 걸어다니는 저 찰리브라운과 다를 바가 없지만,
 이렇게 예쁘고 실용적인 시계의 모습을 하고 있는 것이다.
@@ -52,10 +52,10 @@ tagas: [시계, 해밀턴, 카키필드]
 줄질이 잘 받기로 유명한 시계라, 시계줄만 바꿔도 새로운 시계를 차는 느낌도 들고.
 애플워치에 익숙해진 요즘이지만 앞으로는 운동하는 날이 아니라면 이 시계를 더 자주 차고 다닐 예정이다.
 
-{{< img-crop src="images/2021/06/khaki-5.jpeg" width="800" height="600" >}}
-{{< img-crop src="images/2021/06/khaki-6.jpeg" width="800" height="600" >}}
-{{< img-crop src="images/2021/06/khaki-7.jpeg" width="800" height="600" >}}
-{{< img-crop src="images/2021/06/khaki-8.jpeg" width="800" height="600" >}}
-{{< img-crop src="images/2021/06/khaki-9.jpeg" width="800" height="600" >}}
-{{< img-crop src="images/2021/06/khaki-10.jpeg" width="800" height="600" >}}
+{{< img-crop src="images/2021/06/khaki-5.jpeg" width="800" height="600" alt="카키야광" >}}
+{{< img-crop src="images/2021/06/khaki-6.jpeg" width="800" height="600" alt="카키착샷1" >}}
+{{< img-crop src="images/2021/06/khaki-7.jpeg" width="800" height="600" alt="카키착샷2" >}}
+{{< img-crop src="images/2021/06/khaki-8.jpeg" width="800" height="600" alt="카키착샷3" >}}
+{{< img-crop src="images/2021/06/khaki-9.jpeg" width="800" height="600" alt="카키착샷4" >}}
+{{< img-crop src="images/2021/06/khaki-10.jpeg" width="800" height="600" alt="카키착샷5" >}}
 

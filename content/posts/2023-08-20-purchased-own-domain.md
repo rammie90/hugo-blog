@@ -14,7 +14,7 @@ tags: [linux]
 
 나도 적당한 domain을 구매해서 이용해보기로 했다. 나는 gabia(<https://www.gabia.com/>)라는 국내 domain 서비스 업체를 이용하기로 했는데, 딱히 가격비교를 열심히 해본 것은 아니다.
 
-![](/images/2023/08/domain_price.png)
+![가비아도메인리스트](/images/2023/08/domain_price.png)
 
 gabia에서 위처럼 여러가지 domain에 따라 가격을 제공한다. 내가 알아 볼 당시 .xyz domain을 이벤트 가격으로 1년 이용할 수 있어서 주소 길이 대비 가성비가 가장 좋았다. domain을 구매 후 내가 알고 있는 서버 IP를 domain에 mapping 해주면 해당 domain 주소로 페이지에 접속 할 수 있다.
 

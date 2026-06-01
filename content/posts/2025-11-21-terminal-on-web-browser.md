@@ -71,8 +71,8 @@ bash> ttyd --port 7681 bash
 
 이제 브라우저에서 사이트 주소 뒤에 /terminal/ 을 붙여서 접속하면 서버 터미널에 접속할 수 있다. htpasswd에서 설정한 login 정보를 입력하면 terminal 화면이 뜬다!
 
-![](/images/2025/11/accessed.png)
+![web터미널](/images/2025/11/accessed.png)
 
 특징은 서버 user 로그인을 하지 않아도 ttyd를 실행한 user로 이미 로그인된 터미널이 떠버린다. 보안상 상당히 위험해 보이니 ttyd 옵션을 찾아보거나, 보안 인증을 추가하는게 좋을 것 같다. chatGPT는 Clouldflare를 이용한 추가 인증을 추천하고 있어서 나중에 적용해봐야겠다.
 
-![](/images/2025/11/ttyd_Ex.png)
+![ChatGPT답변](/images/2025/11/ttyd_Ex.png)
