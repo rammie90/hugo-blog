@@ -42,6 +42,9 @@ cleanDestinationDir = true
     showCodeCopyButtons = true
     showToc = true
 
+    [params.analytics.naver]
+      SiteVerificationTag = "5252ecf47a97aa604e68c2dc31e363127811ce29"
+
     [params.profileMode]
         imageUrl = "/images/avatar.png"
         enabled = false
