@@ -1,2 +1,7 @@
-{{ $page := site.GetPage (.Get 0) }}
-<a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+{{ $path := .Get "path" | default (.Get 0) }}
+{{ $page := .Site.GetPage $path }}
+{{ if $page }}
+    <a href="{{ $page.RelPermalink }}">{{ .Get "text" | default $page.Title }}</a>
+{{ else }}
+    {{ errorf "post-link: page not found for %q in %q" $path .Page.File.Filename }}
+{{ end }}
