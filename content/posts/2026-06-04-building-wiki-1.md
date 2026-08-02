@@ -87,6 +87,24 @@ sudo apt install -y php8.3 php8.3-fpm php8.3-mysql php8.3-xml php8.3-mbstring \
   php8.3-curl php8.3-zip php8.3-intl php8.3-apcu php8.3-gd php8.3-cli
 ```
 
+<details>
+<summary>PHP 모듈별 필요성</summary>
+
+|모듈    |필수 여부   |용도|
+|---|---|---|
+|php8.3-fpm         |✅ 필수 |Nginx와 PHP 연동 (Nginx는 PHP 직접 실행 불가)|
+|php8.3-mysql       |✅ 필수 |MariaDB/MySQL 데이터베이스 연결|
+|php8.3-xml         |✅ 필수 |XML 파싱 (MediaWiki 내부에서 광범위하게 사용)|
+|php8.3-mbstring    |✅ 필수 |멀티바이트 문자 처리 — 한국어 필수|
+|php8.3-intl        |✅ 필수 |국제화/다국어 처리|
+|php8.3-curl        |✅ 필수 |외부 URL fetch, API 연동|
+|php8.3-gd          |✅ 필수 |이미지 썸네일 생성|
+|php8.3-zip         |⚡ 권장 |확장(Extension) 설치 시 필요|
+|php8.3-apcu        |⚡ 권장 |오브젝트 캐시 — 없으면 느려짐|
+|php8.3-cli         |⚡ 권장 |커맨드라인 유지보수 스크립트 실행|
+
+</details>
+
 #### MariaDB 설치
 ``` bash
 sudo apt install -y mariadb-server
@@ -104,6 +122,93 @@ GRANT ALL PRIVILEGES ON mediawiki.* TO 'wikiuser'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
 ```
+
+<details>
+<summary>DB 설정의 자세한 설명</summary>
+
+1. MariaDB 접속
+```bash
+sudo mysql -u root -p
+```
+sudo — MariaDB root는 OS root 권한으로 접속하는 방식이 기본
+-u root — MariaDB 사용자 root로 로그인
+-p — 비밀번호 입력 프롬프트 표시 (mysql_secure_installation에서 설정한 비밀번호)
+
+접속 성공하면 프롬프트가 아래처럼 바뀌어요:
+```
+MariaDB [(none)]>
+```
+
+2. 데이터베이스 생성
+```sql
+CREATE DATABASE mediawiki CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+|항목    |설명|
+|---|---|
+|CREATE DATABASE mediawiki   |mediawiki라는 이름의 DB 생성|
+|CHARACTER SET utf8mb4   |문자셋 설정 — 한국어/이모지 포함 모든 유니코드 지원|
+|COLLATE utf8mb4_unicode_ci  |정렬/비교 규칙 — ci는 대소문자 구분 안 함|
+
+⚠️ utf8 대신 utf8mb4를 써야 해요. MariaDB의 utf8은 실제로 3바이트라 이모지 등 일부 문자가 깨져요.
+
+3. 전용 사용자 생성
+```sql
+CREATE USER 'wikiuser'@'localhost' IDENTIFIED BY '강력한비밀번호';
+```
+|항목    |설명|
+|---|---|
+|'wikiuser'  |새로 만들 계정 이름 (원하는 이름으로 변경 가능)|
+|'@localhost'    |로컬에서만 접속 허용 (외부 접속 차단)|
+|IDENTIFIED BY '...' |이 계정의 비밀번호 설정|
+
+root 계정을 직접 쓰지 않고 전용 계정을 만드는 이유는 권한을 최소화해서 보안을 높이기 위해서예요. 혹시 MediaWiki가 해킹당해도 DB 전체가 털리는 걸 방지할 수 있어요.
+
+4. 권한 부여
+```sql
+GRANT ALL PRIVILEGES ON mediawiki.* TO 'wikiuser'@'localhost';
+```
+|항목    |설명|
+|---|---|
+|GRANT ALL PRIVILEGES    |모든 권한 부여 (SELECT, INSERT, UPDATE, DELETE 등)|
+|ON mediawiki.*  |mediawiki DB의 모든 테이블에만 적용|
+|TO 'wikiuser'@'localhost'   |위에서 만든 계정에게 부여|
+
+\*.\* 이 아니라 mediawiki.\* 로 해당 DB에만 권한을 제한하는 게 포인트예요.
+
+5. 권한 테이블 갱신
+```sql
+FLUSH PRIVILEGES;
+```
+변경한 권한 설정을 즉시 메모리에 반영해요. 이걸 안 하면 재시작 전까지 적용이 안 될 수 있어요.
+
+6. 종료
+```sql
+EXIT;
+```
+
+7. 설정 확인 (선택)
+잘 만들어졌는지 확인하고 싶다면:
+```sql
+-- DB 목록 확인
+SHOW DATABASES;
+
+-- 사용자 목록 확인
+SELECT user, host FROM mysql.user;
+
+-- 권한 확인
+SHOW GRANTS FOR 'wikiuser'@'localhost';
+```
+
+|전체 흐름 요약|  
+|---|
+|MariaDB 접속 → DB 생성 → 전용 유저 생성 → 해당 DB에만 권한 부여 → 적용 → 종료|
+
+나중에 MediaWiki 설치 마법사에서 아래 정보를 입력하게 돼요:  
+* DB 이름: mediawiki
+* DB 사용자: wikiuser
+* DB 비밀번호: 설정한 비밀번호
+
+</details>
 
 ### ✅ Mediawiki 설치
 드디어 wiki 사이트의 본체인 Mediawiki를 설치할 차례입니다.
@@ -187,3 +292,5 @@ nginx 설정을 잘 했다면, 설정된 도메인으로 서버에 설치한 Med
 
 이번 글 내용을 통해 Mediawiki 설치는 완료했지만, 이 설정부터가 진정한 시작입니다 ㅎㅎ..  
 K-meme wiki의 설정 과정은 다음 포스팅에서부터 진행 해보겠습니다. 안녕!!
+
+* 다음글: {{< post-link "2026-08-01-building-wiki-2.md" >}}

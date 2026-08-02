@@ -3,7 +3,7 @@ date: 2026-05-29T15:34:03+09:00
 draft: false
 title: 기록 남기기는 어려워
 type: posts
-slug: documeting-is-hard
+slug: documenting-is-hard
 categories: 개인
 tags: 
 ---
