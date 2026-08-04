@@ -1,0 +1,36 @@
+<script src="https://giscus.app/client.js"
+        data-repo="rammie90/hugo-blog"
+        data-repo-id="R_kgDOSgyzHA"
+        data-category="giscus database"
+        data-category-id="DIC_kwDOSgyzHM4DCqGm"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="ko"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+<script>
+    function setGiscusTheme(theme) {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage(
+            { giscus: { setConfig: { theme: theme === 'dark' ? 'dark' : 'light' } } },
+            'https://giscus.app'
+        );
+    }
+
+    // PaperMod는 <html data-theme="dark|light">로 테마를 저장
+    const observer = new MutationObserver(() => {
+        setGiscusTheme(document.documentElement.getAttribute('data-theme'));
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+    window.addEventListener('load', () => {
+        setTimeout(() => setGiscusTheme(document.documentElement.getAttribute('data-theme')), 1000);
+    });
+</script>

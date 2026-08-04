@@ -41,6 +41,8 @@ cleanDestinationDir = true
     showBreadCrumbs = true
     showCodeCopyButtons = true
     showToc = true
+    # 댓글 활성화
+    comments = true
 
     [params.analytics.naver]
       SiteVerificationTag = "5252ecf47a97aa604e68c2dc31e363127811ce29"
