@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-DEFAULT_DIR="$HOME/rammie-blog/static/images"
+DEFAULT_DIR="$HOME/hugo/rammie-blog/static/images"
 TARGET_DIR="$DEFAULT_DIR"
 
 usage() {
