@@ -7,7 +7,7 @@ date: 2023-08-20T08:56:51+00:00
 #url: /dev/92/
 cover:
   image: /images/2023/08/wordpress-e1699109372198.png
-categories: dev
+categories: [dev, 블로그 운영]
 tags: [blog, linux, server, wordpress]
 ---
 요즘은 많은 홈페이지와 블로그들이 WordPress를 통해서 만들어진다고 한다. WordPress를 설치형 블로그라고 하는데, 페이지 모양을 구성해주는 일종의 템플릿이다.

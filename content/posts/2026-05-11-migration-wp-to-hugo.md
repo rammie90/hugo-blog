@@ -3,7 +3,7 @@ title: "WordPress에서 Hugo로 갈아타기 by Claude"
 slug: migration-wp-to-hugo
 date: 2026-05-11
 tags: ["hugo", "wordpress", "blog", "migration", "nginx"]
-categories: ["dev"]
+categories: [dev, 블로그 운영]
 description: "MariaDB와 WordPress로 운영하던 블로그를 Hugo 정적 사이트로 마이그레이션한 과정"
 cover:
   image: /images/2026/05/hugo-logo-wide.svg

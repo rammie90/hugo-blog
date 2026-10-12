@@ -3,6 +3,7 @@ date: 2026-05-12T23:16:32+09:00
 draft: true
 title: Hugo 상세설정
 slug: hugo-detail-config
+categories: [dev, 블로그 운영]
 ---
 Wordpress에서 export한 글을 migration 했을 때 home 화면에서 글 목록이 나오지 않는 문제
 toml 파일

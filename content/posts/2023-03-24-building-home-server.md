@@ -7,7 +7,7 @@ date: 2023-03-24T12:52:09+00:00
 #url: /dev/65/
 cover:
   image: /images/2023/03/D8826C3F-6427-45F2-B403-27B871CF5C33-scaled-e1679578251210.jpeg
-categories: dev
+categories: [dev, 블로그 운영]
 tags: [linux]
 ---
 ## 0. 홈 서버 용 하드웨어 준비

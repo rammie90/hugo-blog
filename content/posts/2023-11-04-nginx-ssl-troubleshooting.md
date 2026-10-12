@@ -7,7 +7,7 @@ date: 2023-11-04T14:39:47+00:00
 #url: /dev/86/
 cover:
   image: /images/2023/11/ssl.jpg
-categories: dev
+categories: [dev, 블로그 운영]
 tags: [https, letsencrypt, linux, nginx, server, ssl, security]
 ---
 서버를 구축하고, WordPress를 설치하고, 내 domain을 구매해서 이제 어디서나 domain 주소로 내 블로그에 접속할 수 있게 되었다. 하지만 이 상태로 블로그를 사용하면 보안이 취약해서 블로그 관리를 위한 로그인 정보 등이 해킹 당할 위험이 있다. 보안을 강화하기 위해서 SSL을 적용할 수 있다.
