@@ -66,6 +66,10 @@ cleanDestinationDir = true
         url = 'https://instagram.com/rammie90/'
 
     [[params.socialIcons]]
+        name = 'threads'
+        url = 'https://threads.com/@rammie90/'
+
+    [[params.socialIcons]]
         name = 'linkedin'
         url = 'https://www.linkedin.com/in/rammie90/'
 
