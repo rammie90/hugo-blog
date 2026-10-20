@@ -1,0 +1,76 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <div class="home-info-inner">
+
+        {{/* 아바타 */}}
+        <div class="home-avatar">
+            {{- if site.Params.profileMode.imageUrl }}
+            <img src="{{ site.Params.profileMode.imageUrl }}" alt="{{ site.Params.author }}" />
+            {{- else }}
+            <span>{{ substr (site.Params.author | default "Me") 0 2 | upper }}</span>
+            {{- end }}
+        </div>
+
+        {{/* 기존 home-info 콘텐츠 */}}
+        <div class="home-info-content">
+            <header class="entry-header">
+                <h1>{{ .Title | markdownify }}</h1>
+            </header>
+            <div class="entry-content md-content">
+                {{ $opts := dict "display" "block" }}
+                {{ .Content | $.Page.RenderString $opts }}
+            </div>
+            <footer class="entry-footer">
+                {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+            </footer>
+        </div>
+
+    </div>
+</article>
+
+<style>
+.home-info-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.home-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--code-bg);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--secondary);
+    flex-shrink: 0;
+}
+
+.home-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-info-content {
+    flex: 1;
+}
+
+@media (max-width: 480px) {
+  .home-info-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+  }
+
+  .home-avatar {
+      margin-left: 1.2rem;
+  }
+}
+</style>
+{{- end -}}
